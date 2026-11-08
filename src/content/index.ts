@@ -66,7 +66,7 @@ export const portfolioContent: PortfolioContent = {
       id: 'metric-atc',
       value: '$43.88K',
       label: 'Shopee Add-To-Cart Value',
-      context: '86 ATC units & $3.49K direct sales from 7 orders in high-involvement Smart TVs',
+      context: '$3.49K direct sales from 7 conversion orders via Facebook Advertising',
       organization: 'Hisense Electronics · Toshiba TV',
     },
     {
@@ -191,11 +191,11 @@ export const portfolioContent: PortfolioContent = {
     },
     {
       id: 'skill-ms-office',
-      name: 'Microsoft Office & Reporting Suite',
+      name: 'Microsoft Office & Google Data Studio',
       category: 'Performance & Analytics',
       level: 'Advanced · Campaign Tracking & Decks',
       summary:
-        'Building media pacing trackers, post-campaign performance reports, editorial calendars, and stakeholder presentation decks in Excel, Word, and PowerPoint.',
+        'Building sales reports, post-campaign performance reports, and stakeholder presentation decks in Excel, Word, and PowerPoint.',
       appliedAt: 'All Marketing & Communications Roles',
       iconName: 'FileSpreadsheet',
     },
@@ -253,7 +253,7 @@ export const portfolioContent: PortfolioContent = {
       outcomes: [
         'Generated 2,392 total Shopee store visits across 2,179 unique visitors.',
         'Drove 86 Add-To-Cart (ATC) units valued at $43.88K in gross merchandise consideration.',
-        'Secured 7 direct conversion orders totaling $3.49K in verified sales for a high-involvement consumer electronics category.',
+        'Secured $3.49K direct sales from 7 conversion orders via Facebook Advertising for a high-involvement consumer electronics category.',
       ],
       metrics: [
         { label: 'Shopee Store Visits', value: '2,392' },

@@ -188,7 +188,7 @@ export const Hero: React.FC<HeroProps> = ({ profile, metrics, marqueeItems }) =>
                   Recent Paid Media & Marketplace Highlight
                 </p>
                 <p className="mt-1 leading-relaxed text-slate-300">
-                  Managed $7,200 in Oct–Nov Meta Ads budgets for Toshiba Smart TVs, driving 2,392 Shopee visits and $43.88K in Add-To-Cart value.
+                  Managed $7,200 in Oct–Nov Meta Ads budgets for Toshiba Smart TVs, driving 2,392 Shopee visits, $43.88K in Add-To-Cart value, and $3.49K direct sales from 7 conversion orders via Facebook Advertising.
                 </p>
               </div>
 

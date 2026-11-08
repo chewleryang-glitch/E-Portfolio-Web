@@ -18,6 +18,25 @@ test('portfolioContent contains verified resume details and Web3Forms token', ()
   assert.equal(portfolioContent.experiences.length, 5);
   assert.equal(portfolioContent.education.length, 2);
   assert.ok(portfolioContent.projects.length >= 5);
+
+  const msOfficeSkill = portfolioContent.skills.find(
+    (s) => s.id === 'skill-ms-office'
+  );
+  assert.ok(msOfficeSkill);
+  assert.equal(msOfficeSkill.name, 'Microsoft Office & Google Data Studio');
+  assert.equal(
+    msOfficeSkill.summary,
+    'Building sales reports, post-campaign performance reports, and stakeholder presentation decks in Excel, Word, and PowerPoint.'
+  );
+
+  const atcMetric = portfolioContent.heroMetrics.find(
+    (m) => m.id === 'metric-atc'
+  );
+  assert.ok(atcMetric);
+  assert.equal(
+    atcMetric.context,
+    '$3.49K direct sales from 7 conversion orders via Facebook Advertising'
+  );
 });
 
 test('filterSkillsByCategory returns all skills for All and filters specific categories', () => {
