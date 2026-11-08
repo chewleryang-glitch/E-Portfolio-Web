@@ -14,14 +14,10 @@ export const Hero: React.FC<HeroProps> = ({ profile, metrics, marqueeItems }) =>
 
   return (
     <section id="top" className="relative overflow-hidden pt-10 pb-16 sm:pt-16 sm:pb-24">
-      {/* Subtle Ambient Deep Gradient Mesh */}
+      {/* Subtle Ambient Deep Gradient Backdrop */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-40 left-1/4 h-[520px] w-[520px] rounded-full bg-blue-600/15 blur-[130px]"
-      />
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute top-20 right-10 h-[420px] w-[420px] rounded-full bg-amber-500/10 blur-[140px]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_25%_15%,rgba(37,99,235,0.14),transparent_55%),radial-gradient(circle_at_80%_25%,rgba(245,158,11,0.08),transparent_50%)]"
       />
 
       <div className="mx-auto max-w-[1200px] px-4 sm:px-6 lg:px-8">
