@@ -164,14 +164,18 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                       {project.summary}
                     </p>
 
-                    {/* Quantitative Metrics Row (Tabular Numerals) */}
-                    <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-4 border-y border-white/[0.08] py-4">
+                    {/* Quantitative Metrics Grid (Tabular Numerals with generous column spacing) */}
+                    <div
+                      className={`mt-6 grid grid-cols-2 gap-x-6 gap-y-4 border-y border-white/[0.08] py-4 ${
+                        project.featured ? 'sm:grid-cols-4 sm:gap-x-5' : ''
+                      }`}
+                    >
                       {project.metrics.map((m) => (
-                        <div key={m.label}>
-                          <p className="font-mono-tabular text-base font-semibold text-white sm:text-lg">
+                        <div key={m.label} className="min-w-0">
+                          <p className="font-mono-tabular text-base font-semibold leading-snug text-white break-words">
                             {m.value}
                           </p>
-                          <p className="mt-0.5 text-[11px] text-slate-400">
+                          <p className="mt-1 text-xs leading-snug text-slate-400">
                             {m.label}
                           </p>
                         </div>
@@ -180,8 +184,14 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                   </div>
 
                   {/* Deliverables & Interactive Modal Trigger */}
-                  <div className="mt-5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                    <p className="text-xs text-slate-400 truncate max-w-md">
+                  <div
+                    className={`mt-5 flex flex-col gap-4 ${
+                      project.featured
+                        ? 'sm:flex-row sm:items-center sm:justify-between'
+                        : 'items-start justify-between'
+                    }`}
+                  >
+                    <p className="text-xs leading-relaxed text-slate-400">
                       {project.deliverables.join(' · ')}
                     </p>
 

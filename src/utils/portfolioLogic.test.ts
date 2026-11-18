@@ -3,12 +3,14 @@ import assert from 'node:assert/strict';
 import { portfolioContent } from '../content/index';
 import {
   buildWeb3FormsPayload,
+  filterExperiences,
   filterProjects,
   filterSkillsByCategory,
+  findExperienceById,
   validateContactForm,
 } from './portfolioLogic';
 
-test('portfolioContent contains verified resume details and Web3Forms token', () => {
+test('portfolioContent contains verified resume details, combined Experience data, and no Projects nav item', () => {
   assert.equal(portfolioContent.profile.name, 'Chew Ler Yang');
   assert.equal(portfolioContent.profile.email, 'lychew004@suss.edu.sg');
   assert.equal(
@@ -17,7 +19,15 @@ test('portfolioContent contains verified resume details and Web3Forms token', ()
   );
   assert.equal(portfolioContent.experiences.length, 5);
   assert.equal(portfolioContent.education.length, 2);
-  assert.ok(portfolioContent.projects.length >= 5);
+
+  // Verify Projects is removed from navigation and Experience has dropdown flag
+  const navLabels = portfolioContent.navigation.map((n) => n.label);
+  assert.equal(navLabels.includes('Projects'), false);
+  assert.equal(navLabels.includes('Experience'), true);
+  const expNav = portfolioContent.navigation.find(
+    (n) => n.label === 'Experience'
+  );
+  assert.equal(expNav?.hasExperienceDropdown, true);
 
   const msOfficeSkill = portfolioContent.skills.find(
     (s) => s.id === 'skill-ms-office'
@@ -37,6 +47,29 @@ test('portfolioContent contains verified resume details and Web3Forms token', ()
     atcMetric.context,
     '$3.49K direct sales from 7 conversion orders via Facebook Advertising'
   );
+});
+
+test('filterExperiences and findExperienceById work for unified Experience & Campaign roles', () => {
+  const allExp = filterExperiences(portfolioContent.experiences, 'All');
+  assert.equal(allExp.length, 5);
+
+  const ecomExp = filterExperiences(
+    portfolioContent.experiences,
+    'Performance & E-Commerce'
+  );
+  assert.equal(ecomExp.length, 1);
+  assert.equal(ecomExp[0].id, 'exp-hisense');
+  assert.ok(ecomExp[0].campaignTitle.includes('Toshiba TV'));
+
+  const hisenseRole = findExperienceById(
+    portfolioContent.experiences,
+    'exp-hisense'
+  );
+  assert.ok(hisenseRole);
+  assert.equal(hisenseRole.role, 'Digital Marketing Intern');
+  assert.ok(hisenseRole.strategy.length > 0);
+  assert.ok(hisenseRole.outcomes.length > 0);
+  assert.ok(hisenseRole.metrics.length === 4);
 });
 
 test('filterSkillsByCategory returns all skills for All and filters specific categories', () => {

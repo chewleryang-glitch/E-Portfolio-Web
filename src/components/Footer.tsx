@@ -4,9 +4,24 @@ import { NavItem, ProfileData } from '../types/portfolio';
 interface FooterProps {
   profile: ProfileData;
   navigation: NavItem[];
+  onNavigateSection?: (href: string) => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ profile, navigation }) => {
+export const Footer: React.FC<FooterProps> = ({
+  profile,
+  navigation,
+  onNavigateSection,
+}) => {
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    if (onNavigateSection) {
+      e.preventDefault();
+      onNavigateSection(href);
+    }
+  };
+
   return (
     <footer className="border-t border-white/[0.08] bg-[#06080D] py-10">
       <div className="mx-auto flex max-w-[1200px] flex-col items-start justify-between gap-6 px-4 sm:flex-row sm:items-center sm:px-6 lg:px-8">
@@ -22,6 +37,7 @@ export const Footer: React.FC<FooterProps> = ({ profile, navigation }) => {
             <a
               key={item.href}
               href={item.href}
+              onClick={(e) => handleLinkClick(e, item.href)}
               className="hover:text-white transition-colors whitespace-nowrap"
             >
               {item.label}

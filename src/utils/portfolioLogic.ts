@@ -1,11 +1,19 @@
 import {
   ContactFormValues,
   ContactValidationResult,
+  ExperienceItem,
   ProjectCategory,
   ProjectItem,
   SkillCategory,
   SkillItem,
 } from '../types/portfolio';
+
+export const PROJECT_CATEGORIES: ProjectCategory[] = [
+  'All',
+  'Performance & E-Commerce',
+  'Social & Content Strategy',
+  'Brand & Web Production',
+];
 
 /**
  * Filters skills by selected category.
@@ -49,6 +57,53 @@ export function filterProjects(
 
     return searchableText.includes(normalizedQuery);
   });
+}
+
+/**
+ * Filters combined Experience & Campaign items by category and optional search query.
+ */
+export function filterExperiences(
+  experiences: ExperienceItem[],
+  category: ProjectCategory,
+  searchQuery = ''
+): ExperienceItem[] {
+  const normalizedQuery = searchQuery.trim().toLowerCase();
+
+  return experiences.filter((exp) => {
+    const matchesCategory = category === 'All' || exp.category === category;
+    if (!matchesCategory) return false;
+
+    if (!normalizedQuery) return true;
+
+    const searchableText = [
+      exp.role,
+      exp.company,
+      exp.shortCompany,
+      exp.companyDescriptor,
+      exp.campaignTitle,
+      exp.campaignSubtitle,
+      exp.summary,
+      ...exp.highlights,
+      ...exp.deliverables,
+      ...exp.skillsUsed,
+      ...exp.metrics.map((m) => `${m.label} ${m.value}`),
+    ]
+      .join(' ')
+      .toLowerCase();
+
+    return searchableText.includes(normalizedQuery);
+  });
+}
+
+/**
+ * Finds a specific ExperienceItem by its ID.
+ */
+export function findExperienceById(
+  experiences: ExperienceItem[],
+  roleId: string | null | undefined
+): ExperienceItem | null {
+  if (!roleId) return null;
+  return experiences.find((exp) => exp.id === roleId) ?? null;
 }
 
 /**

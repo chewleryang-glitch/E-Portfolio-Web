@@ -39,8 +39,7 @@ export const portfolioContent: PortfolioContent = {
 
   navigation: [
     { label: 'Stack', href: '#stack' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Experience', href: '#experience' },
+    { label: 'Experience', href: '#experience', hasExperienceDropdown: true },
     { label: 'Education', href: '#education' },
   ],
 
@@ -93,25 +92,25 @@ export const portfolioContent: PortfolioContent = {
         'A balanced toolkit combining performance media buying, marketplace SEO copywriting, audience diagnostics, and visual content production.',
     },
     projects: {
-      index: '02. Selected Campaign Works',
-      title: 'Featured Case Studies & Brand Activations',
+      index: '02. Experience',
+      title: 'Experience & Selected Campaign Works',
       subtitle:
-        'Every campaign is built around a clear conversion hypothesis—bridging top-of-funnel awareness with measurable bottom-of-funnel intent. Click any case study to inspect the full strategy breakdown.',
+        'Five hands-on marketing, communications, and content production roles combined with their verified campaign case studies. Select any role below or from the Experience dropdown menu in the top toolbar to open its dedicated page.',
     },
     experience: {
-      index: '03. Career Progression',
-      title: 'Professional Work Experience',
+      index: '02. Experience',
+      title: 'Experience & Selected Campaign Works',
       subtitle:
-        'Five hands-on marketing, communications, and content production roles across global consumer electronics, food distribution, AI EdTech, and public outreach.',
+        'Five hands-on marketing, communications, and content production roles combined with their verified campaign case studies. Select any role below or from the Experience dropdown menu in the top toolbar to open its dedicated page.',
     },
     education: {
-      index: '04. Academic Foundation',
+      index: '03. Academic Foundation',
       title: 'Education & Academic Standing',
       subtitle:
         'Rigorous training in consumer behaviour, marketing strategy, and mass communication at leading Singapore institutions.',
     },
     contact: {
-      index: '05. Initiate a Conversation',
+      index: '04. Initiate a Conversation',
       title: 'Let’s Build Meaningful Audience Impact',
       subtitle:
         'Open to marketing, copywriting, and digital strategy opportunities with forward-thinking brands, agencies, and employers in Singapore and beyond.',
@@ -296,7 +295,7 @@ export const portfolioContent: PortfolioContent = {
         { label: 'Total Impressions', value: '1.3M+' },
         { label: 'Target Youth Reach', value: '296.3K+' },
         { label: 'Instagram Growth', value: '+2,270' },
-        { label: 'Content Activations', value: '9 Campaigns' },
+        { label: 'Content Activations', value: '9 Launched' },
       ],
       deliverables: [
         '9 Multi-Channel Content Activations',
@@ -367,9 +366,10 @@ export const portfolioContent: PortfolioContent = {
         'Streamlined internal marketing coordination for product promotions.',
       ],
       metrics: [
-        { label: 'Website Built', value: '1 Elementor Site' },
+        { label: 'Elementor Website', value: '1 Site Built' },
         { label: 'Commercial Posters', value: '5 Delivered' },
         { label: 'Target Channels', value: 'Eateries & Hawkers' },
+        { label: 'Web Platform', value: 'WordPress' },
       ],
       deliverables: [
         'WordPress Elementor Website Design & Build',
@@ -404,6 +404,7 @@ export const portfolioContent: PortfolioContent = {
         { label: 'Initial IG Community', value: '150+ Followers' },
         { label: 'Editorial Velocity', value: '4 Ideas/Wk' },
         { label: 'Channels Launched', value: 'IG & Facebook' },
+        { label: 'Skills Framework', value: 'UNESCO-WHO' },
       ],
       deliverables: [
         'Ground-Up Instagram & Facebook Account Setup',
@@ -414,69 +415,185 @@ export const portfolioContent: PortfolioContent = {
     },
   ],
 
+  /**
+   * Combined Experience & Selected Campaign Works entries.
+   * Each entry powers both the overview card in "02. Experience" and its dedicated Role Detail Page.
+   */
   experiences: [
     {
       id: 'exp-hisense',
+      index: '01',
       role: 'Digital Marketing Intern',
       company: 'Hisense Electronics (Singapore) PTE. LTD.',
+      shortCompany: 'Hisense Electronics (Toshiba TV)',
       companyDescriptor: 'Global No. 2 TV Brand',
       location: 'Singapore',
       period: 'Jun 2025 – Dec 2025',
       type: 'Internship',
+      category: 'Performance & E-Commerce',
+      campaignTitle: 'Toshiba TV Full-Funnel Meta Ads & Marketplace Growth',
+      campaignSubtitle: 'Performance Marketing & E-Commerce SEO Copywriting',
+      summary:
+        'Managed the Meta Ads Manager account and Shopee/Lazada product copywriting for Toshiba Smart TVs, bridging full-funnel awareness with measurable e-commerce checkout intent.',
+      challenge:
+        'Smart TVs are a high-involvement, high-ticket consumer electronics category where shoppers compare specifications extensively before purchasing. The challenge was to pace monthly budgets ($4,000 in October and $3,200 in November) efficiently to drive qualified Shopee store traffic and high-value Add-To-Cart actions.',
+      strategy: [
+        'Architected full-funnel Meta Ads campaigns spanning Top-of-Funnel (TOFU/Awareness) reach and Middle-of-Funnel (MOFU) traffic & engagement objectives.',
+        'Paced daily ad spends dynamically across $4,000 (October) and $3,200 (November) monthly budgets using real-time performance telemetry and independent market research.',
+        'Rewrote Toshiba Smart TV product listings on Shopee and Lazada with persuasive, SEO-friendly benefit hierarchies and high-clarity Facebook ad copy.',
+      ],
+      outcomes: [
+        'Generated 2,392 total Shopee store visits across 2,179 unique visitors.',
+        'Drove 86 Add-To-Cart (ATC) units valued at $43.88K in gross merchandise consideration.',
+        'Secured $3.49K direct sales from 7 conversion orders via Facebook Advertising for a high-involvement consumer electronics category.',
+      ],
       highlights: [
         'Managed the Meta Ads Manager account for Toshiba TV, successfully executing full-funnel marketing strategies spanning Top-of-Funnel (TOFU/Awareness) and Middle-of-Funnel (MOFU) campaigns.',
         'Strategically allocated and optimised monthly advertising budgets of $4,000 (October) and $3,200 (November), pacing daily ad spends based on real-time performance and data-driven independent research.',
-        'Drove e-commerce consideration and intent, generating 2,392 total Shopee store visits (2,179 unique visitors), 86 Add-To-Cart (ATC) units valued at $43.88K, and securing 7 conversion orders totaling $3.49K in sales for a high-involvement consumer electronics category.',
+        'Drove e-commerce consideration and intent, generating 2,392 total Shopee store visits (2,179 unique visitors), 86 Add-To-Cart (ATC) units valued at $43.88K, and securing 7 conversion orders totaling $3.49K in sales via Facebook Advertising for a high-involvement consumer electronics category.',
         'Crafted persuasive, SEO-friendly e-commerce product copywriting for Toshiba Smart TV listings on Shopee and Lazada, and ad copy for Facebook Ads.',
+      ],
+      metrics: [
+        { label: 'Shopee Store Visits', value: '2,392' },
+        { label: 'Unique Visitors', value: '2,179' },
+        { label: 'ATC Pipeline Value', value: '$43.88K' },
+        { label: 'Add-To-Cart Units', value: '86 Units' },
       ],
       keyMetrics: [
         '$4,000 (Oct) & $3,200 (Nov) Budgets Managed',
         '2,392 Shopee Visits (2,179 Unique)',
         '86 ATC Units ($43.88K Value)',
-        '7 Orders ($3.49K Sales)',
+        '$3.49K Direct Sales (7 Orders)',
+      ],
+      deliverables: [
+        'Meta Ads TOFU/MOFU Campaign Architecture',
+        'Daily Budget Pacing & ROAS Optimization ($7.2K Managed)',
+        'Shopee & Lazada SEO Product Listings',
+        'Facebook Conversion Ad Copywriting',
       ],
       skillsUsed: ['Meta Ads Manager', 'Shopee & Lazada SEO', 'Conversion Copywriting', 'Budget Pacing'],
+      accentGradient: 'from-blue-600/25 via-indigo-500/10 to-transparent',
     },
     {
       id: 'exp-eastern-harvest',
+      index: '02',
       role: 'Marketing Intern',
       company: 'Eastern Harvest Foods (Singapore) Pte Ltd',
+      shortCompany: 'Eastern Harvest Foods',
       companyDescriptor: 'Top Importer & Distributor of Frozen Seafood & Japanese Food Products',
       location: 'Singapore',
       period: 'May 2024 – Aug 2024',
       type: 'Internship',
+      category: 'Brand & Web Production',
+      campaignTitle: 'Corporate Web Build & Foodservice POS Visual Campaign',
+      campaignSubtitle: 'WordPress Elementor Website & Commercial Print Collateral',
+      summary:
+        'Designed and launched a WordPress Elementor website alongside 5 commercial food product posters distributed to eateries and hawker centres across Singapore.',
+      challenge:
+        'As a premier importer and distributor of frozen seafood and Japanese food products, Eastern Harvest needed both a modern digital storefront and high-impact physical promotional posters to help local hawker centres and eateries showcase their ingredients.',
+      strategy: [
+        'Designed and built 1 complete corporate website using WordPress Elementor, organizing product categories and food safety credentials clearly.',
+        'Created and delivered 5 visual graphic posters spotlighting flagship seafood and Japanese food products for on-site display at eateries and hawker stalls.',
+        'Coordinated cross-departmental marketing schedules between sales representatives and foodservice clients.',
+      ],
+      outcomes: [
+        'Launched 1 responsive WordPress Elementor web presence for B2B buyers.',
+        'Delivered 5 production-ready promotional posters deployed across partner eateries and hawker centres.',
+        'Streamlined internal marketing coordination for product promotions.',
+      ],
       highlights: [
         'Created and delivered 5 graphic posters showcasing food products which Eastern Harvest promotes to eateries and hawker centres.',
         'Created 1 website via WordPress Elementor to present the company’s quality ingredients and tailored food solutions.',
         'Facilitated marketing coordination for the company across internal teams and foodservice partners.',
       ],
+      metrics: [
+        { label: 'Elementor Website', value: '1 Site Built' },
+        { label: 'Commercial Posters', value: '5 Delivered' },
+        { label: 'Target Channels', value: 'Eateries & Hawkers' },
+        { label: 'Web Platform', value: 'WordPress' },
+      ],
       keyMetrics: ['5 Commercial Posters Delivered', '1 WordPress Elementor Website Built'],
+      deliverables: [
+        'WordPress Elementor Website Design & Build',
+        '5 Commercial Foodservice Graphic Posters',
+        'B2B Marketing Coordination Workflows',
+      ],
       skillsUsed: ['WordPress Elementor', 'Canva Design', 'B2B Marketing Coordination', 'Print Collateral'],
+      accentGradient: 'from-cyan-500/20 via-blue-500/10 to-transparent',
     },
     {
       id: 'exp-lifevitae',
+      index: '03',
       role: 'Marketing and Outreach Intern',
       company: 'LifeVitae Pte Ltd',
+      shortCompany: 'LifeVitae (AI EdTech)',
       companyDescriptor: 'AI & UNESCO-WHO Life Skills Framework EdTech Startup',
       location: 'Singapore',
       period: 'Dec 2023 – Feb 2024',
       type: 'Internship',
+      category: 'Social & Content Strategy',
+      campaignTitle: 'Zero-to-One EdTech Social Presence & AI Life-Skills Content',
+      campaignSubtitle: 'Ground-Up Channel Launch & Weekly Editorial Engine',
+      summary:
+        'Established ground-up Instagram and Facebook channels for a Singapore AI EdTech startup utilizing the UNESCO-WHO Life Skills Framework, driving early community traction.',
+      challenge:
+        'LifeVitae needed to translate complex AI-driven career diagnostics and the UNESCO-WHO Life Skills Framework into accessible, engaging social content starting from zero existing social footprint.',
+      strategy: [
+        'Built and configured official Instagram and Facebook brand accounts from the ground up, establishing visual and editorial guidelines.',
+        'Conceptualised and copywrote 4 weekly content pillars translating personal strengths and career insights into interactive social posts.',
+        'Managed community interactions and iterative hook testing to build initial organic momentum.',
+      ],
+      outcomes: [
+        'Garnered 150+ organic Instagram followers from a zero-follower cold start within a 3-month sprint.',
+        'Established a repeatable 4x/week social content engine that strengthened brand credibility.',
+      ],
       highlights: [
         'Established and managed ground-up Instagram and Facebook accounts, which garnered 150+ followers on Instagram.',
         'Conceptualised and copywrote 4 weekly content ideas to drive audience engagement for LifeVitae’s socials.',
         'Strengthened LifeVitae’s social media presence and brand awareness within the career insights space.',
       ],
+      metrics: [
+        { label: 'Initial IG Community', value: '150+ Followers' },
+        { label: 'Editorial Velocity', value: '4 Ideas/Wk' },
+        { label: 'Channels Launched', value: 'IG & Facebook' },
+        { label: 'Skills Framework', value: 'UNESCO-WHO' },
+      ],
       keyMetrics: ['150+ Instagram Followers From Scratch', '4 Weekly Content Ideas Copywritten'],
+      deliverables: [
+        'Ground-Up Instagram & Facebook Account Setup',
+        '4 Weekly Educational Content Pillars',
+        'UNESCO-WHO Life Skills Social Copywriting',
+      ],
       skillsUsed: ['Social Media Management', 'Content Ideation', 'Copywriting', 'Brand Launch'],
+      accentGradient: 'from-violet-500/20 via-indigo-500/10 to-transparent',
     },
     {
       id: 'exp-bss',
+      index: '04',
       role: 'Communications Intern',
       company: 'The Bible Society of Singapore (BSS)',
+      shortCompany: 'The Bible Society of Singapore',
       companyDescriptor: 'Mission-Driven Translation, Publishing & Literacy Organization',
       location: 'Singapore',
       period: 'Sep 2020 – Jun 2021',
       type: 'Internship',
+      category: 'Social & Content Strategy',
+      campaignTitle: 'Omnichannel Social Audit, Daily Content & Print Editorial',
+      campaignSubtitle: 'Communications & Audience Engagement Overhaul',
+      summary:
+        'Executed a comprehensive social media audit, established a 7-day/week editorial cadence, and authored print articles for national newsletters and seasonal appeals.',
+      challenge:
+        'BSS needed to modernize its digital outreach to engage varied demographic segments consistently while simultaneously supporting physical print readership and seasonal fundraising appeals.',
+      strategy: [
+        'Conducted 1 end-to-end social media audit to pinpoint engagement bottlenecks and unlock underutilized platform features.',
+        'Conceptualised and copywrote 7 weekly social media content ideas (1 per day) calibrated for diverse age and community demographics.',
+        'Authored 2 long-form print media pieces: a feature article for Word@Work (quarterly physical newsletter) and a persuasive Chinese New Year donation appeal.',
+      ],
+      outcomes: [
+        'Increased Instagram follower count by +756 organic followers.',
+        'Measurably strengthened cross-platform audience engagement across Instagram and Facebook.',
+        'Delivered print-ready editorial journalism and fundraising copy for nationwide physical distribution.',
+      ],
       highlights: [
         'Conducted 1 social media audit to identify areas for improvement and leverage platform features for maximum outreach.',
         'Conceptualised and copywrote 7 weekly social media content ideas (1 per day) to engage BSS’s varied demographics effectively.',
@@ -484,24 +601,69 @@ export const portfolioContent: PortfolioContent = {
         'Strengthened BSS’s social media presence and improved the organisation’s audience engagement across its socials.',
         'Wrote 2 articles for print media (1 for Word@Work, a quarterly physical newsletter, and another for a CNY-themed donation appeal).',
       ],
+      metrics: [
+        { label: 'IG Follower Lift', value: '+756' },
+        { label: 'Weekly Cadence', value: '7 Posts/Wk' },
+        { label: 'Print Features', value: '2 Published' },
+        { label: 'Channel Audit', value: '1 Full Audit' },
+      ],
       keyMetrics: ['+756 Instagram Followers', '7 Weekly Content Ideas (1/Day)', '2 Print Media Articles', '1 Social Media Audit'],
+      deliverables: [
+        'Comprehensive Social Media Audit Report',
+        'Daily Social Content Calendar (7 Ideas/Week)',
+        'Word@Work Quarterly Print Feature Article',
+        'CNY-Themed Fundraising Appeal Copy',
+      ],
       skillsUsed: ['Social Media Audit', 'Editorial Copywriting', 'Print Journalism', 'Audience Engagement'],
+      accentGradient: 'from-emerald-500/20 via-teal-500/10 to-transparent',
     },
     {
       id: 'exp-cnb',
+      index: '05',
       role: 'Content Strategy & Production I/C',
       company: 'Central Narcotics Bureau (Final-Year Capstone Project)',
+      shortCompany: 'Central Narcotics Bureau (CNB)',
       companyDescriptor: 'Singapore’s Primary Drug Enforcement Agency',
       location: 'Singapore',
       period: 'Apr 2020 – Aug 2020',
       type: 'Capstone Project',
+      category: 'Social & Content Strategy',
+      campaignTitle: 'Central Narcotics Bureau Drug-Free Youth Content Activations',
+      campaignSubtitle: 'Multi-Platform Content Strategy & Production I/C',
+      summary:
+        'Spearheaded content strategy and multi-format copywriting across 9 digital activations to elevate youth awareness of a drug-free lifestyle across Facebook, Instagram, and TikTok.',
+      challenge:
+        'Public-sector anti-drug messaging can easily feel didactic to younger audiences. Our objective was to craft authentic, shareable digital activations that resonated organically with Singapore youths across emerging short-form and social channels.',
+      strategy: [
+        'Conceptualised and copywrote 9 distinct content activations tailored to youth culture and platform-native consumption habits.',
+        'Adapted copywriting voice and narrative structure across 4 distinct formats: long-form articles, visual infographics, social media posts, and video scripts.',
+        'Synchronized cross-channel rollout across Facebook, Instagram, and TikTok to maximize organic amplification and follower retention.',
+      ],
+      outcomes: [
+        'Contributed to 1.3+ million total campaign impressions across digital platforms.',
+        'Reached 296,300+ target audience members across Facebook, Instagram, and TikTok.',
+        'Grew the campaign Instagram community by 2,270+ net new followers.',
+      ],
       highlights: [
         'Conceptualised and copywrote 9 content activations that contributed to 1.3+ million impressions, 296,300+ reach target audience members across Facebook, Instagram, and TikTok, and 2,270+ followers on Instagram.',
         'Adapted writing styles for 4 content formats, which are articles, infographics, social media posts, and scripts.',
         'Enhanced awareness of a drug-free lifestyle among youths through impactful strategic content and digital marketing.',
       ],
+      metrics: [
+        { label: 'Total Impressions', value: '1.3M+' },
+        { label: 'Target Youth Reach', value: '296.3K+' },
+        { label: 'Instagram Growth', value: '+2,270' },
+        { label: 'Content Activations', value: '9 Launched' },
+      ],
       keyMetrics: ['1.3M+ Impressions', '296,300+ Target Audience Reach', '2,270+ IG Followers Gained', '9 Content Activations'],
+      deliverables: [
+        '9 Multi-Channel Content Activations',
+        'Editorial Articles & Educational Infographics',
+        'TikTok & Social Video Scripts',
+        'Instagram & Facebook Copywriting',
+      ],
       skillsUsed: ['Content Strategy', 'Multi-Format Copywriting', 'TikTok / IG / FB Campaigns', 'Scriptwriting'],
+      accentGradient: 'from-amber-500/20 via-orange-500/10 to-transparent',
     },
   ],
 

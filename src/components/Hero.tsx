@@ -61,10 +61,10 @@ export const Hero: React.FC<HeroProps> = ({ profile, metrics, marqueeItems }) =>
             <div className="mt-8 pt-4">
               <div className="flex flex-wrap items-center gap-4">
                 <a
-                  href="#projects"
+                  href="#experience"
                   className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-600/25 hover:bg-blue-500 transition-colors duration-150 whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400"
                 >
-                  <span>Explore Case Studies</span>
+                  <span>Explore Experience & Works</span>
                   <ArrowUpRight className="h-4 w-4" />
                 </a>
 

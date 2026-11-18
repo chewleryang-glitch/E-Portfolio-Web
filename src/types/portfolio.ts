@@ -20,6 +20,7 @@ export type ProjectCategory =
 export interface NavItem {
   label: string;
   href: string;
+  hasExperienceDropdown?: boolean;
 }
 
 export interface HeroMetric {
@@ -76,17 +77,33 @@ export interface ProjectItem {
   externalUrl?: string;
 }
 
+/**
+ * Unified ExperienceItem combining Career Progression role details
+ * and Selected Campaign Works case study data into one cohesive model.
+ */
 export interface ExperienceItem {
   id: string;
+  index: string;
   role: string;
   company: string;
+  shortCompany: string;
   companyDescriptor: string;
   location: string;
   period: string;
   type: 'Internship' | 'Capstone Project';
+  category: Exclude<ProjectCategory, 'All'>;
+  campaignTitle: string;
+  campaignSubtitle: string;
+  summary: string;
+  challenge: string;
+  strategy: string[];
+  outcomes: string[];
   highlights: string[];
+  metrics: ProjectMetric[];
   keyMetrics: string[];
+  deliverables: string[];
   skillsUsed: string[];
+  accentGradient: string;
 }
 
 export interface EducationItem {
